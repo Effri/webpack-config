@@ -3,6 +3,8 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 const PATHS = {
   src: path.join(__dirname, "../src"),
@@ -23,7 +25,7 @@ module.exports = {
     app: PATHS.src,
   },
   output: {
-    filename: `${PATHS.assets}js/[name].js`,
+    filename: `${PATHS.assets}js/[name].[contenthash].js`,
     path: PATHS.dist,
     publicPath: "/",
   },
@@ -39,6 +41,11 @@ module.exports = {
         },
       },
     },
+    minimizer: [
+      new UglifyJsPlugin({
+        test: /\.js(ts)?$/i,
+      }),
+    ],
   },
   module: {
     rules: [
@@ -102,8 +109,9 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].css`,
+      filename: `${PATHS.assets}css/[name].[contenthash].css`,
     }),
+    new CleanWebpackPlugin(),
     ...PAGES.map(
       (page) =>
         new HtmlWebpackPlugin({
