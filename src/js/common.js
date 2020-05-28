@@ -1,4 +1,7 @@
-let counter = 0;
-document.addEventListener("click", () => {
-  console.log(counter++);
-});
+/*
+const foo = {
+    bar: 12,
+    baz: 48
+};
+console.dir(foo);
+*/
