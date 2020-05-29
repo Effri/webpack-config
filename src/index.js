@@ -1,6 +1,6 @@
 import "./libs";
 
-import "./js/common.jsx";
-import "./js/common.js";
+import "./js/";
+import "./components/index.jsx";
 
 import "./sass/main.sass";

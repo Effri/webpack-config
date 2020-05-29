@@ -1,1 +1,61 @@
+.root
+    width: 500px
+    height: 1000px
+    border: 2px solid black
+    margin: auto
+.comment
+    max-width: 450px
+    width: 100%
+    margin: 25px auto
+    padding: 10px
+    border: 1px solid black
+    border-radius: 5px
+    &__user
+        height: 40px
+        display: flex
+        align-items: center
+        &-avatar img
+            height: 35px
+            width: 35px
+            border-radius: 100%
+            object-fit: cover
+        &-nickname
+            margin-left: 20px
+    &__content
+        word-wrap: break-word
+.comments
+    flex-wrap: wrap
+    margin: auto
+    border: 2px solid black
+    border-radius: 20px
+    margin-top: 40px
+    &__logo
+        width: 100%
+        text-align: center
+        text-decoration: underline
+        user-select: none
+        font-size: +rem(35px)
+    &__items
+        margin: auto
+    &__new
+        border: 1px solid black
+        border-radius: 15px
+        width: 100%
+        margin: auto
+        text-align: center
+        padding: 20px
+        input
+            display: block
+            margin: auto
+            border: 1px solid black
+        textarea
+            display: block
+            margin: 20px auto
+            resize: none
+            border: 1px solid black
+        button
+            margin-bottom: 40px
+            cursor: pointer
+            
+
 
