@@ -1,9 +1,8 @@
-class Logo extends React.Component {
-  render() {
-    return <h1>{this.props.title}</h1>;
-  }
+function Logo(props) {
+  return <h1>{props.title}</h1>;
 }
 Logo.propTypes = {
   title: PropTypes.string.isRequired,
 };
+
 export default Logo;
