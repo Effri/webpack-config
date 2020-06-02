@@ -62,6 +62,7 @@ module.exports = {
         test: /\.pug$/,
         loader: "pug-loader",
       },
+      { test: /\.json$/, loader: "json-loader" },
       {
         test: /\.(png|jp[2g]|webp|tiff|jfif|jpeg(2000)?|ico|bem|gif|svg)$/i,
         loader: "file-loader",
