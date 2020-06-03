@@ -27,6 +27,10 @@ class CreateComment extends React.Component {
       user: text,
     }));
   }
+  static propTypes = {
+    onCommentSubmit: PropTypes.func.isRequired,
+    content: PropTypes.string,
+  };
   handleTextChange(event) {
     // ?
     const text = event.target.value;
@@ -55,10 +59,5 @@ class CreateComment extends React.Component {
     );
   }
 }
-
-CreateComment.propTypes = {
-  onCommentSubmit: PropTypes.func.isRequired,
-  content: PropTypes.string,
-};
 
 export default CreateComment;
