@@ -14,10 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/preset-react": "^7.10.1",
-    "animejs": "^3.2.0",
-    "font-awesome": "^4.7.0",
-    "json-loader": "^0.5.7"
+    "@babel/preset-react": "^7.10.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
@@ -35,7 +32,7 @@
     "cssnano": "^4.1.10",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
-    "jquery": "^3.5.1",
+    "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
     "path": "^0.12.7",
