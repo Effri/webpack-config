@@ -1,3 +1,5 @@
+/** @format */
+
 const fs = require("fs");
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -5,6 +7,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const webpack = require("webpack");
 
 const PATHS = {
   src: path.join(__dirname, "../src"),
@@ -25,19 +28,26 @@ module.exports = {
     app: PATHS.src,
   },
   output: {
-    filename: `${PATHS.assets}js/[name].[contenthash].js`,
+    filename: `${PATHS.assets}js/[name].[contenthash:12].js`,
     path: PATHS.dist,
     publicPath: "/",
   },
 
   optimization: {
+    runtimeChunk: "single",
     splitChunks: {
+      chunks: "all",
+      maxInitialRequests: Infinity,
+      minSize: 0,
       cacheGroups: {
         vendor: {
-          name: "vendors",
-          test: /node_modules/,
-          chunks: "all",
-          enforce: true,
+          test: /[\\/]node_modules[\\/]/i,
+          name(module) {
+            const name = module.context.match(
+              /[\\/]node_modules[\\/](.*?)([\\/]|$)/
+            )[1];
+            return `npm.${name.replace("@", "")}`;
+          },
         },
       },
     },
@@ -115,6 +125,8 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.HashedModuleIdsPlugin(),
+
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].[contenthash].css`,
     }),
