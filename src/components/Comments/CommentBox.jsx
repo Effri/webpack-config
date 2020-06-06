@@ -1,6 +1,8 @@
-import Comment from "./Comment.jsx";
-import Logo from "./Logo.jsx";
-import CreateComment from "./CreateComment.jsx";
+/** @format */
+
+import Comment from "./Comment";
+import Logo from "./Logo";
+import CreateComment from "./CreateComment";
 
 class CommentBox extends React.Component {
   constructor(props) {

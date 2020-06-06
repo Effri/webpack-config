@@ -1,4 +1,6 @@
-import CommentBox from "./Comments/CommentBox.jsx";
+/** @format */
+
+import CommentBox from "./Comments/CommentBox";
 
 const data = {
   logo: {

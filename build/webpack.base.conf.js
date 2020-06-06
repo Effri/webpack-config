@@ -29,8 +29,12 @@ module.exports = {
   },
   output: {
     filename: `${PATHS.assets}js/[name].[contenthash:12].js`,
+    chunkFilename: `${PATHS.assets}js/[name].[contenthash:12].js`,
     path: PATHS.dist,
     publicPath: "/",
+  },
+  resolve: {
+    extensions: [".mjs", ".js", ".jsx", ".json"],
   },
 
   optimization: {

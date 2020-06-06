@@ -1,6 +1,8 @@
+/** @format */
+
 import "./libs";
 
 import "./js/";
-import "./components/index.jsx";
+import "./components/";
 
 import "./sass/main.sass";
