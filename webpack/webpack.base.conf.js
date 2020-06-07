@@ -93,7 +93,7 @@ module.exports = {
             loader: "postcss-loader",
             options: {
               sourceMap: true,
-              config: { path: `./build/postcss.config.js` },
+              config: { path: `./webpack/postcss.config.js` },
             },
           },
           {
@@ -115,7 +115,7 @@ module.exports = {
             loader: "postcss-loader",
             options: {
               sourceMap: true,
-              config: { path: `./build/postcss.config.js` },
+              config: { path: `./webpack/postcss.config.js` },
             },
           },
         ],

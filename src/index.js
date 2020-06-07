@@ -1,7 +1,5 @@
 /** @format */
 
-import "./libs";
-
 import "./js/";
 import "./components/";
 

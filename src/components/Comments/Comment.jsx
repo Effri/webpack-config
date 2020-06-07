@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react";
-import { themes, ThemeContext } from "../../js/theme-context";
+import { ThemeContext } from "../../js/theme-context";
 
 function Comment(props) {
   return (
