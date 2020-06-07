@@ -1,9 +1,6 @@
 /** @format */
 
 import React from "react";
-export const obj = {
-  date: "123123",
-};
 
 class CreateComment extends React.Component {
   constructor(props) {
