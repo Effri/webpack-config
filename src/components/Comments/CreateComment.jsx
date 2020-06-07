@@ -1,3 +1,10 @@
+/** @format */
+
+import React from "react";
+export const obj = {
+  date: "123123",
+};
+
 class CreateComment extends React.Component {
   constructor(props) {
     super(props);
@@ -21,23 +28,21 @@ class CreateComment extends React.Component {
       content: "",
     }));
   }
+
   handleUserChange(event) {
     const text = event.target.value;
     this.setState(() => ({
       user: text,
     }));
   }
-  static propTypes = {
-    onCommentSubmit: PropTypes.func.isRequired,
-    content: PropTypes.string,
-  };
+
   handleTextChange(event) {
-    // ?
     const text = event.target.value;
     this.setState(() => ({
       content: text,
     }));
   }
+
   render() {
     return (
       <form className="comments__new" onSubmit={this.handleSubmit}>
@@ -50,8 +55,6 @@ class CreateComment extends React.Component {
         <textarea
           value={this.state.content}
           placeholder="Your comment"
-          cols="30"
-          rows="10"
           onChange={this.handleTextChange}
         ></textarea>
         <button type="submit">Отправить</button>

@@ -1,8 +1,5 @@
-function Logo(props) {
+/** @format */
+import React from "react";
+export default function Logo(props) {
   return <h1>{props.title}</h1>;
 }
-Logo.propTypes = {
-  title: PropTypes.string.isRequired,
-};
-
-export default Logo;

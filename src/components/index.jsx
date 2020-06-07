@@ -1,5 +1,6 @@
 /** @format */
-
+import React from "react";
+import ReactDOM from "react-dom";
 import CommentBox from "./Comments/CommentBox";
 
 const data = {

@@ -1,3 +1,8 @@
+/** @format */
+
+import React from "react";
+import { themes, ThemeContext } from "../../js/theme-context";
+
 function Comment(props) {
   return (
     <div className="comment">
@@ -8,14 +13,11 @@ function Comment(props) {
         <div className="comment__user-nickname">{props.user}</div>
       </div>
       <div className="comment__content">{props.content}</div>
+      <ThemeContext.Consumer>
+        {(val) => <b>{val.background}</b>}
+      </ThemeContext.Consumer>
     </div>
   );
 }
-
-Comment.propTypes = {
-  img: PropTypes.any,
-  user: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
-};
 
 export default Comment;

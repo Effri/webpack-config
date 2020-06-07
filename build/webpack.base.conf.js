@@ -6,7 +6,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const webpack = require("webpack");
 
 const PATHS = {
@@ -55,11 +54,6 @@ module.exports = {
         },
       },
     },
-    minimizer: [
-      new UglifyJsPlugin({
-        test: /\.js(ts)?$/i,
-      }),
-    ],
   },
   module: {
     rules: [
