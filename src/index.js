@@ -1,5 +1,6 @@
 /** @format */
 
+import "./static/all.min.js";
 import "./js/";
 import "./components/";
 
